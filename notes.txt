@@ -1,0 +1,50 @@
+<?php include 'db_connect.php'; ?>
+will be as if you typed the code inside another code. (import)
+
+you do not need data types like js, you just
+$name = "patrick"
+
+same
+if(){}
+elseif(){}
+else{}
+
+learned Laragon, a better version of Xampp and can be used to simulate databases and local servers.
+you can even create a dev version of wordpress.
+
+learned the difference of $_POST and $_GET
+$_POST = methods used to send data from a form
+$_GET = get from the url
+
+learned that you can use php to simulate react components.
+
+encountered errors in localhost/phpmyadmin. thats because phpmyadmin is not installed. 
+C:\laragon\etc\apps\ <- place it here when you downloaded it.
+
+when laragon is running apache, mysql, etc, just C:\laragon\www\php_crud_training <- your folder name. 
+it will run index.php inside it.
+
+restart laragon if http://php_crud_training.test does not work.
+
+if (isset($_POST['submit']))
+a button with name=submit was pressed
+
+$_POST is a method to get value from html to php by assigning a name.
+
+PHP highlights 
+C - $sql = "INSERT INTO users (name, email, age) VALUES ('$name', '$email', '$age')";
+R - fetchassoc gives an associative array
+U - UPDATE users
+    SET name='John Doe', email='john@example.com', age='25'
+    WHERE id=3;
+D - $sql = "DELETE FROM users WHERE id=$id";
+
+
+
+
+
+
+
+
+
+
