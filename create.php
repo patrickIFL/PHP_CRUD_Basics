@@ -17,6 +17,7 @@
         <input type="text" name="name" placeholder="Name" required class="block w-full mb-3 border p-2 rounded">
         <input type="email" name="email" placeholder="Email" required class="block w-full mb-3 border p-2 rounded">
         <input type="number" name="age" placeholder="Age" required class="block w-full mb-3 border p-2 rounded">
+        <input type="text" name="password" placeholder="Password" required class="block w-full mb-3 border p-2 rounded">
         <button type="submit" name="submit" class="bg-blue-500 text-white px-4 py-2 w-full rounded hover:bg-blue-600">Add User</button>
     </form>
 
@@ -33,9 +34,10 @@ if (isset($_POST['submit'])) {
   $name = $_POST['name'];
   $email = $_POST['email'];
   $age = $_POST['age'];
+  $password = $_POST['password'];
 
-  $sql = "INSERT INTO users (name, email, age) VALUES ('$name', '$email', '$age')";
-  
+  $sql = "INSERT INTO users (name, email, age, password) VALUES ('$name', '$email', '$age', '$password')";
+
   if ($conn->query($sql) === TRUE) {
     echo "<script>alert('New user added!'); window.location='index.php';</script>";
   } else {

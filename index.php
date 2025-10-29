@@ -9,6 +9,8 @@
   <title>Database Connection</title>
 </head>
 <body>
+
+<!-- decorator, database connected -->
     <div class="
       <?php echo $connected 
       ? 'bg-green-500' 
@@ -19,17 +21,20 @@
       <?php echo $connected ? 'Database Connected' : 'Failed'; ?>
 
       </div>
+<!-- ------------------------------ -->
 
 <div class="max-w-5xl h-screen mx-auto p-10">
     
-    
-    
     <h1 class="text-3xl font-bold mb-5 text-center">User List</h1>
     
-    <div class="flex justify-center">
+    <div class="flex justify-center gap-3">
         <a href="create.php" 
         class="bg-blue-500 w-full text-center text-white px-4 py-2 rounded hover:bg-blue-600 mb-4 inline-block">
         + Add User
+        </a>
+        <a href="login.php" 
+        class="bg-amber-700 w-full text-center text-white px-4 py-2 rounded hover:bg-amber-800 mb-4 inline-block">
+        Login
         </a>
     </div>
     
@@ -39,6 +44,7 @@
         <th class="py-2 px-4">Name</th>
         <th class="py-2 px-4">Email</th>
         <th class="py-2 px-4">Age</th>
+        <th class="py-2 px-4">Password</th>
         <th class="py-2 px-4">Actions</th>
       </tr>
     
@@ -52,6 +58,7 @@
             <td class='py-2 px-4'>{$row['name']}</td>
             <td class='py-2 px-4'>{$row['email']}</td>
             <td class='py-2 px-4'>{$row['age']}</td>
+            <td class='py-2 px-4'>{$row['password']}</td>
             
             <td class='py-2 px-4'>
               <a href='edit.php?id={$row['id']}' class='text-blue-600'>Edit</a> |

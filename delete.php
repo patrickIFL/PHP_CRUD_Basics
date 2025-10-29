@@ -9,7 +9,7 @@ if ($conn->query($sql) === TRUE) {
   <script>
     alert('User deleted!');
     window.location='index.php';
-</script>";
+  </script>";
 } else {
   echo "Error deleting record: " . $conn->error;
 }

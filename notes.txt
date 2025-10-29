@@ -39,6 +39,9 @@ U - UPDATE users
     WHERE id=3;
 D - $sql = "DELETE FROM users WHERE id=$id";
 
+Learned that you can make wordpress apps using Laragon
+
+rightclick, quickapps, wordpress then proceed accordingly.
 
 
 
