@@ -39,7 +39,12 @@ if (isset($_POST['submit'])) {
   $sql = "INSERT INTO users (name, email, age, password) VALUES ('$name', '$email', '$age', '$password')";
 
   if ($conn->query($sql) === TRUE) {
-    echo "<script>alert('New user added!'); window.location='index.php';</script>";
+    echo "
+    <script>
+    alert('New user added!'); 
+    window.location='index.php';
+    </script>";
+    
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }

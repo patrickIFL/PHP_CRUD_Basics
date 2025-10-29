@@ -1,0 +1,15 @@
+SELECT -> selects values
+SELECT * -> selects all
+SELECT user -> select column
+SELECT DISTINCT user -> selects (unique) user(column) values.
+SELECT COUNT(*) FROM users -> returns the length of the table.
+
+note: SELECT COUNT(*) FROM (SELECT DISTINCT Country FROM Customers);
+"You can nest SQL commands."
+
+SELECT * FROM Customers WHERE City='Berlin'; -> Conditionals
+SELECT * FROM Customers WHERE CustomerID=1; -> int values must not have ''.
+
+stopped at the WHERE clause
+
+https://www.w3schools.com/sql/default.asp
