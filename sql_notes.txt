@@ -1,15 +1,44 @@
+https://www.w3schools.com/sql/default.asp
+
 SELECT -> selects values
 SELECT * -> selects all
 SELECT user -> select column
 SELECT DISTINCT user -> selects (unique) user(column) values.
 SELECT COUNT(*) FROM users -> returns the length of the table.
 
+=> DISTINCT <=
+
 note: SELECT COUNT(*) FROM (SELECT DISTINCT Country FROM Customers);
 "You can nest SQL commands."
+
+=> WHERE CLAUSE <=
 
 SELECT * FROM Customers WHERE City='Berlin'; -> Conditionals
 SELECT * FROM Customers WHERE CustomerID=1; -> int values must not have ''.
 
 stopped at the WHERE clause
 
-https://www.w3schools.com/sql/default.asp
+=> ORDER BY <=
+
+SELECT * FROM Products ORDER BY ProductID;
+note: by default on ints, ascending order (1-10).
+note: by default on strings, ascending order (A-Z).
+note: you can add DESC. 
+eg: SELECT * FROM Products ORDER BY ProductID DESC;
+
+
+SELECT * FROM Customers ORDER BY Country, CustomerName;
+This means that it orders by Country, but if some rows have the same Country, it orders them by CustomerName:
+
+=> AND/OR OPERATOR <=
+
+SELECT * FROM Customers WHERE Country = 'Spain' AND CustomerName LIKE 'G%';
+note: country = spain and starts with name starts with 'G'
+AND = all conditions are TRUE.
+OR = any of the conditions are TRUE.
+
+=> Combining two conditions <=
+ 
+SELECT * FROM Customers
+WHERE Country = 'Spain' 
+AND (CustomerName LIKE 'G%' OR CustomerName LIKE 'R%');
